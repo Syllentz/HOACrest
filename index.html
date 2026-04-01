@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mason Woods Community Association - Document Reference</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green-dark:#2d5016;--green-mid:#4a7c34;--green-light:#7a9e6d;--sage:#a8c99b;--cream:#faf8f2;--white:#ffffff;--text:#2c2c2c;--text-light:#555;--border:#e0ddd5;--shadow:0 2px 12px rgba(0,0,0,0.08)}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{color:var(--green-mid);text-decoration:none}
+a:hover{color:var(--green-dark);text-decoration:underline}
+
+/* Header */
+.header{background:linear-gradient(135deg,var(--green-dark),var(--green-mid));color:white;text-align:center;padding:3rem 1rem 2rem}
+.header h1{font-size:2.2rem;margin-bottom:.5rem;font-weight:700;letter-spacing:.5px}
+.header p{font-size:1.05rem;opacity:.9}
+.lang-toggle{position:absolute;top:1rem;right:1.5rem;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:.4rem 1rem;color:white;font-size:.9rem}
+.lang-toggle a{color:white;font-weight:600}
+.lang-toggle a:hover{text-decoration:underline}
+.header-wrap{position:relative;max-width:1200px;margin:0 auto}
+
+/* Nav */
+.nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;gap:0;overflow-x:auto;padding:0 1rem}
+.nav a{display:block;padding:.9rem 1.2rem;font-size:.85rem;font-weight:600;color:var(--text-light);white-space:nowrap;border-bottom:3px solid transparent;transition:all .2s}
+.nav a:hover,.nav a:focus{color:var(--green-dark);border-bottom-color:var(--green-mid);text-decoration:none;background:rgba(74,124,52,.05)}
+
+/* Main */
+.main{max-width:1100px;margin:0 auto;padding:2rem 1rem}
+
+/* Category Section */
+.category{margin-bottom:3rem}
+.category-title{font-size:1.5rem;color:var(--green-dark);border-bottom:3px solid var(--sage);padding-bottom:.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.category-icon{font-size:1.3rem}
+
+/* Document Card */
+.doc-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--shadow);transition:box-shadow .2s}
+.doc-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.doc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
+.doc-title{font-size:1.2rem;font-weight:700;color:var(--green-dark)}
+.view-pdf{display:inline-block;background:var(--green-mid);color:white;padding:.4rem 1rem;border-radius:6px;font-size:.85rem;font-weight:600;transition:background .2s}
+.view-pdf:hover{background:var(--green-dark);color:white;text-decoration:none}
+
+.doc-body{display:flex;gap:1.5rem;align-items:flex-start}
+.doc-thumb{flex-shrink:0}
+.doc-thumb img{width:140px;border:1px solid var(--border);border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.1);cursor:pointer;transition:transform .2s}
+.doc-thumb img:hover{transform:scale(1.03)}
+.doc-content{flex:1;min-width:0}
+
+.doc-summary{font-size:.95rem;color:var(--text);margin-bottom:1rem;line-height:1.7}
+.doc-summary strong{color:var(--green-dark)}
+
+.key-items{list-style:none;padding:0}
+.key-items li{padding:.4rem 0;font-size:.9rem;display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;border-bottom:1px solid #f0ede6}
+.key-items li:last-child{border-bottom:none}
+.key-text{flex:1}
+.page-link{flex-shrink:0;font-size:.8rem;color:var(--green-mid);font-weight:600;white-space:nowrap}
+.page-link:hover{color:var(--green-dark)}
+
+.key-label{font-weight:700;color:var(--green-dark);font-size:.85rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.5px}
+
+/* Footer */
+.footer{background:var(--green-dark);color:rgba(255,255,255,.85);text-align:center;padding:2rem 1rem;font-size:.9rem}
+.footer a{color:var(--sage)}
+.footer p{margin-bottom:.3rem}
+
+/* Responsive */
+@media(max-width:700px){
+  .doc-body{flex-direction:column}
+  .doc-thumb img{width:100%;max-width:200px}
+  .header h1{font-size:1.6rem}
+  .nav-inner{gap:0}
+  .nav a{padding:.7rem .8rem;font-size:.8rem}
+  .key-items li{flex-direction:column;gap:.2rem}
+  .page-link{align-self:flex-end}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-wrap">
+    <div class="lang-toggle"><a href="index-es.html">Espa&ntilde;ol</a></div>
+    <h1>Mason Woods Community Association</h1>
+    <p>Document Reference Guide &mdash; Cypress, TX 77433</p>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#governing">Governing Documents</a>
+    <a href="#architectural">Property &amp; Architectural</a>
+    <a href="#homeowner">Homeowner Policies</a>
+    <a href="#rental">Facility Rental</a>
+    <a href="#admin">Administrative</a>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ==================== GOVERNING DOCUMENTS ==================== -->
+<section class="category" id="governing">
+<h2 class="category-title">Governing Documents</h2>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Declaration of Covenants, Conditions, and Restrictions (DCCR)</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Declaration of Covenants, Conditions, and Restrictions.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Declaration of Covenants, Conditions, and Restrictions.pdf" target="_blank"><img src="./images/dccr-p1.png" alt="DCCR page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it is:</strong> This is the master legal document for Mason Woods &mdash; think of it as the community&rsquo;s &ldquo;constitution.&rdquo; It establishes all the rules that run with the land, meaning they apply to every current and future homeowner. It covers property rights, assessments (HOA dues), architectural controls, common area rules, and the Association&rsquo;s enforcement powers. Recorded under Clerk&rsquo;s File No. RP-2022-378389 in Harris County.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Defines what you can and cannot do with your property, from exterior modifications to land use</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Declaration of Covenants, Conditions, and Restrictions.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text">Establishes mandatory annual assessments (HOA dues) that fund community maintenance</span></li>
+        <li><span class="key-text">Creates the Architectural Review Committee (ARC) that must approve exterior changes</span></li>
+        <li><span class="key-text">Gives the Association authority to enforce rules, levy fines, and place liens on property</span></li>
+        <li><span class="key-text">Defines common areas, easements, and the Association&rsquo;s maintenance responsibilities</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Bylaws</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Bylaws.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Bylaws.pdf" target="_blank"><img src="./images/bylaws-p1.png" alt="Bylaws page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it is:</strong> The Bylaws are the Association&rsquo;s internal operating manual. They explain how the Board of Directors is elected, how meetings are run, and how decisions get made. If the DCCR is the &ldquo;what,&rdquo; the Bylaws are the &ldquo;how.&rdquo;</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Board of Directors structure &mdash; how many members, how they&rsquo;re elected, term lengths</span></li>
+        <li><span class="key-text">Meeting procedures &mdash; annual meetings, special meetings, notice requirements</span></li>
+        <li><span class="key-text">Voting rules &mdash; quorum requirements, proxy voting, ballot procedures</span></li>
+        <li><span class="key-text">Officer roles and duties &mdash; President, Vice President, Secretary, Treasurer</span></li>
+        <li><span class="key-text">Committee authority &mdash; how committees like the ARC are created and empowered</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Supplemental Amendments (Sections 1, 4, 7 &amp; 8)</span>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to the DCCR_27s Sec 1.pdf" target="_blank"><img src="./images/supplement-sec1-p1.png" alt="Supplement Sec 1 page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What they are:</strong> These four amendments officially bring Sections 1, 4, 7, and 8 of the neighborhood into Mason Woods. Each one adds section-specific rules and important environmental notices about the land &mdash; things like detention areas, restricted reserves, gas easements, and wildlife habitats near your property.</p>
+      <div class="key-label">Key Provisions (same across all sections)</div>
+      <ul class="key-items">
+        <li><span class="key-text">All homes must have at least 1,200 square feet of living area</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to the DCCR_27s Sec 1.pdf#page=3" target="_blank">Sec 1 p.3 &rarr;</a></li>
+        <li><span class="key-text">Environmental condition notices &mdash; restricted reserves, detention ponds, and sensitive areas near your lot</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to the DCCR_27s Sec 1.pdf#page=4" target="_blank">Sec 1 p.4 &rarr;</a></li>
+        <li><span class="key-text">Utility and gas transmission easements &mdash; you cannot build on these areas</span></li>
+        <li><span class="key-text">Homeowners assume liability for environmental conditions and must not contaminate restricted areas</span></li>
+        <li><span class="key-text">Full indemnification of the Association and Declarant from environmental claims</span></li>
+      </ul>
+      <div style="margin-top:.8rem;font-size:.85rem">
+        <a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to the DCCR_27s Sec 1.pdf" target="_blank" class="view-pdf" style="margin-right:.5rem">Section 1</a>
+        <a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to the DCCR_27s Sec 4.pdf" target="_blank" class="view-pdf" style="margin-right:.5rem">Section 4</a>
+        <a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to Declaration for Sec 7.pdf" target="_blank" class="view-pdf" style="margin-right:.5rem">Section 7</a>
+        <a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Supplemental Amendment to Declaration for Sec 8.pdf" target="_blank" class="view-pdf">Section 8</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ==================== PROPERTY & ARCHITECTURAL ==================== -->
+<section class="category" id="architectural">
+<h2 class="category-title">Property &amp; Architectural Standards</h2>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Architectural Modification Guidelines</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=3" target="_blank"><img src="./images/arch-guidelines-p1.png" alt="Arch Guidelines page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> Planning to build a patio cover, put up a fence, paint your house, or add a pool? You need to read this first. Every exterior modification to your home requires approval from the Architectural Review Committee (ARC) <em>before</em> you start work. This document spells out exactly what&rsquo;s allowed for 24 types of projects &mdash; materials, dimensions, colors, and locations.</p>
+      <div class="key-label">Key Rules by Project Type</div>
+      <ul class="key-items">
+        <li><span class="key-text"><strong>Arbors/Pergolas:</strong> Max 12 ft height, 300 sq ft. Decay-resistant materials. No enclosure walls allowed.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Basketball Goals:</strong> 1 per lot. Portable goals max 10 ft from facade. Metal pole, plexiglass/fiberglass backboard. No chain nets.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Building Additions:</strong> Must match existing home style. Cannot exceed 1/3 of remaining backyard. Engineered drawings required.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+        <li><span class="key-text"><strong>Decks/Patios:</strong> Backyard only. Max 18&Prime; height, 300 sq ft. Must be 5 ft from rear and 3 ft from side property lines.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+        <li><span class="key-text"><strong>Driveways:</strong> Max 18 ft wide. Concrete and rebar only. Extensions cannot be just for extra parking.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=6" target="_blank">See p.6 &rarr;</a></li>
+        <li><span class="key-text"><strong>Exterior Paint:</strong> Earth tones only. Must be harmonious with brick and roof. Trim may be deeper shade.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=6" target="_blank">See p.6 &rarr;</a></li>
+        <li><span class="key-text"><strong>Fences:</strong> Cedar pickets, pine posts. No chain link, chicken wire, or lattice. Stain only &mdash; no paint. Dog-eared style.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=7" target="_blank">See p.7 &rarr;</a></li>
+        <li><span class="key-text"><strong>Landscaping:</strong> Live plants only &mdash; no artificial. Black or brown mulch only (no red). Cannot obstruct sight lines.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=8" target="_blank">See p.8 &rarr;</a></li>
+        <li><span class="key-text"><strong>Patio Covers:</strong> Wood or aluminum only. Must integrate with existing roofline. Shingles must match home. 7&ndash;12 ft height.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=9" target="_blank">See p.9 &rarr;</a></li>
+        <li><span class="key-text"><strong>Pools/Spas:</strong> No above-ground pools. Rear yard only. 3 ft from property lines. $1,000 deposit if accessing through Association landscape.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=11" target="_blank">See p.11 &rarr;</a></li>
+        <li><span class="key-text"><strong>Storage Buildings:</strong> Max 9 ft tall, 120 sq ft. Must match home materials/colors. On 4&Prime; concrete slab. No corrugated roofs.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=13" target="_blank">See p.13 &rarr;</a></li>
+        <li><span class="key-text"><strong>Front Yard Accessories:</strong> Max 4 items, max 18&Prime; tall. No bird baths, free-standing flagpoles, or park benches.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=14" target="_blank">See p.14 &rarr;</a></li>
+        <li><span class="key-text"><strong>Perimeter Fencing:</strong> Steel only, 5&ndash;6 ft, powder coated black. Min 4&Prime; between vertical bars. 3 ft from sidewalks.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Architectural Modification Guidelines.pdf#page=15" target="_blank">See p.15 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Solar Energy Devices and Roofing Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Solar Energy Devices and Roofing Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Solar Energy Devices and Roofing Policy.pdf" target="_blank"><img src="./images/solar-roofing-policy-p1.png" alt="Solar Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> Thinking about solar panels or a new roof? Solar devices are allowed but must meet specific location and aesthetic requirements. Roofing materials must be wind-resistant and match the look of the neighborhood. ARC approval is required before installation.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Solar panels are permitted on rooftops or within fenced yards that meet criteria</span></li>
+        <li><span class="key-text">Panels should be as inconspicuous as possible and compatible with roof aesthetics</span></li>
+        <li><span class="key-text">Approved roofing: wind-resistant, energy-efficient materials matching subdivision look</span></li>
+        <li><span class="key-text">ARC approval required for all solar installations and roofing material changes</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Swimming Pool Enclosures Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Swimming Pool Enclosures Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Swimming Pool Enclosures Policy.pdf" target="_blank"><img src="./images/pool-enclosures-policy-p1.png" alt="Pool Enclosures page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> If you have a pool or spa, you need a proper safety enclosure around it. This policy tells you exactly what type of fencing is acceptable. Good news: standard black mesh pool fences are pre-approved &mdash; you don&rsquo;t even need to apply to the ARC.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Enclosure fence must be non-climbable and max 6 feet tall</span></li>
+        <li><span class="key-text"><strong>Pre-approved (no ARC needed):</strong> Black transparent mesh enclosures under 6 ft</span></li>
+        <li><span class="key-text">Other designs/materials require ARC approval before installation</span></li>
+        <li><span class="key-text">Must meet all state and local pool safety requirements</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Security Measures Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Security Measures Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Security Measures Policy.pdf" target="_blank"><img src="./images/security-measures-policy-p1.png" alt="Security Measures page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> Want to add security fencing to your lot? This policy covers what types of security fences are approved under Texas law. The Association isn&rsquo;t responsible for your security &mdash; you assume all risks and costs.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Approved style: 6-foot black steel flat-top metal fencing with specific specifications</span></li>
+        <li><span class="key-text">All security fence installations require ARC approval before work begins</span></li>
+        <li><span class="key-text">Owners assume all risks and must indemnify the Association from any security-related claims</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ==================== HOMEOWNER POLICIES ==================== -->
+<section class="category" id="homeowner">
+<h2 class="category-title">Homeowner Policies</h2>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Flag Display Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf" target="_blank"><img src="./images/flag-display-policy-p1.png" alt="Flag Display page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> You can fly the U.S. flag, Texas flag, or a military branch flag at your home. There are rules on flagpole height and placement, but a simple wall-mounted pole on your house doesn&rsquo;t even need ARC approval if it follows the guidelines.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">One flagpole per lot</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text">Allowed flags: U.S., Texas, or U.S. military branch flags only</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Freestanding poles: max 20 ft tall, backyard preferred, ARC approval required</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Wall-mounted poles: max 5 ft long, front or rear of house, no ARC needed if compliant</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Replace faded/torn flags immediately; halyards must not make noise</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Evening lighting allowed: max 2 bulbs, 150W total, no light spill onto neighbors</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Flag Display Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Display of Religious Items Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf" target="_blank"><img src="./images/religious-items-policy-p1.png" alt="Religious Items page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> You&rsquo;re allowed to display religious items on your property as long as they reflect your sincere religious beliefs. Small items (under 25 square inches) can go up without any paperwork. Larger displays need an ARC application.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Religious displays are generally permitted on your lot or home</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Items 25 square inches or smaller &mdash; no ARC approval needed</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Larger displays require ARC application with description and site plan</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Not allowed on common/Association property, traffic signs, or fire hydrants</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Display of Religious Items Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Rain Barrel Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Rain Barrel Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Rain Barrel Policy.pdf" target="_blank"><img src="./images/rain-barrel-policy-p1.png" alt="Rain Barrel page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> Rain barrels are allowed under Texas law, but there are restrictions on where you can place them and how they look. They generally can&rsquo;t be visible from the street, and you must take steps to prevent mosquito breeding. ARC approval is required.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Not allowed on Association or common property, or between your home and the street</span></li>
+        <li><span class="key-text">If visible, must meet professional-grade standards and be properly screened</span></li>
+        <li><span class="key-text">Mosquito prevention measures are mandatory</span></li>
+        <li><span class="key-text">Colors must comply with community standards; ARC approval required</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Standby Electric Generator Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf" target="_blank"><img src="./images/generator-policy-p1.png" alt="Generator Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> You can install a permanent standby generator (like a Generac) for backup power, but there are rules. It must be professionally installed, enclosed in a sound-attenuating case, and screened from view. You&rsquo;ll need ARC approval before installation.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Minimum 7 kW capacity; must be in a manufacturer&rsquo;s sound enclosure</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Must be installed by licensed contractors (electrical, plumbing, fuel lines)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Must be screened if visible from the street or neighbors</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Testing only allowed between 10:00 AM and 4:00 PM</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Preferred location: side or back of home, outside easements and setback lines</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Only for emergency backup &mdash; cannot replace utility power for regular use</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Generator Policy.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ==================== FACILITY RENTAL ==================== -->
+<section class="category" id="rental">
+<h2 class="category-title">Facility Rental</h2>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Facility Rental Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf" target="_blank"><img src="./images/facility-rental-policy-p1.png" alt="Facility Rental Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> You can rent the community serving room and patio at 7317 Grand Mason Drive for private parties &mdash; birthdays, showers, family gatherings. But there are rules: no alcohol, max 30 people, and you need to book at least 2 weeks ahead. This is the most detailed policy &mdash; read it carefully before booking.</p>
+      <div class="key-label">Key Rules</div>
+      <ul class="key-items">
+        <li><span class="key-text">Must be 21 or older and a Mason Woods resident in good standing</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Only 1 rental per quarter per household; social use only (no commercial events)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Hours: Sun&ndash;Thu 10am&ndash;10pm, Fri&ndash;Sat 10am&ndash;midnight</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Max 2 people in serving room; max 30 total at event (patio shared with community)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+        <li><span class="key-text">No alcohol, no smoking, no glass containers anywhere at the facility</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=6" target="_blank">See p.6 &rarr;</a></li>
+        <li><span class="key-text">No outside cooking equipment (grills, smokers, etc.) without written permission</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+        <li><span class="key-text">Caterers can arrive 1 hour early; no heating equipment allowed inside</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+        <li><span class="key-text">You must vacate within 30 minutes of your event ending</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Youth events (under 18): 2 adults required for every 5 minors</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=8" target="_blank">See p.8 &rarr;</a></li>
+        <li><span class="key-text">Payment by check or money order only &mdash; NO cash or credit cards</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=8" target="_blank">See p.8 &rarr;</a></li>
+        <li><span class="key-text">Cancel 14+ business days out &rarr; deposit refunded. Less than 14 days &rarr; deposit forfeited.</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240808 Facility Rental Policy .pdf#page=10" target="_blank">See p.10 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Facility Rental Price Sheet</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf" target="_blank"><img src="./images/rental-price-sheet-p1.png" alt="Price Sheet page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> Here&rsquo;s what it costs to rent the community room. You&rsquo;ll pay a flat rental fee plus a refundable security deposit. There may be extra charges for holidays, last-minute bookings, or if security is required. Signed August 2024.</p>
+      <div class="key-label">Fee Schedule</div>
+      <ul class="key-items">
+        <li><span class="key-text"><strong>Rental Fee:</strong> $200.00</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text"><strong>Security Deposit (refundable):</strong> $1,000.00</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text"><strong>Holiday Fee:</strong> $150.00 (for events on major federal holidays)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text"><strong>Rush Fee:</strong> $150.00 (booking less than 14 days before event)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text"><strong>Security (if required):</strong> $100.00/hour</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text"><strong>Trash Removal (optional):</strong> $20.00/bag</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20240807 Facility Rental Price Sheet signed.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Rental Application &mdash; Serving Room and Patio</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf" target="_blank"><img src="./images/rental-application-p1.png" alt="Rental Application page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> This is the actual form you fill out to book the community room. Print it, complete it, and submit it with your payment at least 14 days before your event. Make sure you&rsquo;ve read the Rental Policy first.</p>
+      <div class="key-label">What You&rsquo;ll Need to Provide</div>
+      <ul class="key-items">
+        <li><span class="key-text">Your name, Mason Woods address, phone, email, and alternate contact</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text">Event date, times, type of event, number of guests, and age range</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text">Whether you&rsquo;ll have catering, entertainment, or special equipment</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf#page=1" target="_blank">See p.1 &rarr;</a></li>
+        <li><span class="key-text">Proof of homeowner&rsquo;s insurance (may need event insurance too)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Your signature agreeing to indemnification terms</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_20241213 Rental Application - Serving Room and Patio.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ==================== ADMINISTRATIVE & FINANCIAL ==================== -->
+<section class="category" id="admin">
+<h2 class="category-title">Administrative &amp; Financial</h2>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Collection, Board Hearing and Payment Plan Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf" target="_blank"><img src="./images/collection-payment-policy-p1.png" alt="Collection Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> This explains what happens if you fall behind on your HOA dues. The Association follows a step-by-step process before taking serious action. You have rights along the way &mdash; including the right to a hearing and the option to set up a payment plan.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">Assessments are due annually; become delinquent 30 days after due date</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Interest accrues on unpaid balances after 30 days</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Process: Past Due Notice &rarr; Final Notice (certified mail) &rarr; collections/attorney</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">You get at least 45 days to pay before further action</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">You can request a Board hearing within 30 days of the Final Notice</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+        <li><span class="key-text">Payment plans available: minimum 3 months, equal monthly payments</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=7" target="_blank">See p.7 &rarr;</a></li>
+        <li><span class="key-text">Common area access may be suspended if no hearing requested within 30 days</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+        <li><span class="key-text">Foreclosure is possible as a last resort under Texas Property Code</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Collection, Board Hearing and Payment Plan Policy.pdf#page=6" target="_blank">See p.6 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Enforcement, Board Hearing and Fine Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf" target="_blank"><img src="./images/enforcement-fine-policy-p1.png" alt="Enforcement Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> If you violate a community rule, this is the process that follows. The Association doesn&rsquo;t jump straight to fines &mdash; they start with a friendly letter and give you time to fix the issue. Fines only kick in if you don&rsquo;t respond. You always have the right to request a hearing.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text"><strong>Curable violations</strong> (things you can fix): parking, maintenance, barking dogs, unauthorized modifications</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text"><strong>Uncurable violations</strong> (one-time events): fireworks, property damage, unauthorized garage sales</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+        <li><span class="key-text">Step 1: Courtesy Letter (informal &mdash; &ldquo;please fix this&rdquo;)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Step 2: Violation Letter (formal notice with deadline)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Step 3: Demand Letter with fine amount, right to cure, and hearing option</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Fine for curable violations:</strong> up to $100 per day the violation continues</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=7" target="_blank">See p.7 &rarr;</a></li>
+        <li><span class="key-text">You can request a Board hearing within 30 days of the Demand Letter</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+        <li><span class="key-text">Repeat violations within 6 months: fines start immediately without a new Demand Letter</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Dedicatory Instrument Enforcement Board Hearing and Fine Policy.pdf#page=5" target="_blank">See p.5 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Access, Production and Copying Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf" target="_blank"><img src="./images/access-copying-policy-p1.png" alt="Access Policy page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> As a homeowner, you have the right to inspect the Association&rsquo;s books and records. Want to see financial statements, meeting minutes, or contracts? You can &mdash; just submit a written request. There are small fees for copies.</p>
+      <div class="key-label">Key Provisions</div>
+      <ul class="key-items">
+        <li><span class="key-text">You (or your attorney/accountant) can inspect Association books and records</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Submit a written request with detail of what records you want</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+        <li><span class="key-text">Association must respond within 10 business days</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text">Copy fees: $0.10 per page; labor: $15/hour for compiling</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf#page=4" target="_blank">See p.4 &rarr;</a></li>
+        <li><span class="key-text">Not available: other owners&rsquo; violation history, financial info, or personnel files</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Access Production and Copying Policy.pdf#page=2" target="_blank">See p.2 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="doc-card">
+  <div class="doc-header">
+    <span class="doc-title">Document Retention Policy</span>
+    <a class="view-pdf" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf" target="_blank">View Full Document</a>
+  </div>
+  <div class="doc-body">
+    <div class="doc-thumb"><a href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf" target="_blank"><img src="./images/document-retention-policy-p1.png" alt="Document Retention page 1"></a></div>
+    <div class="doc-content">
+      <p class="doc-summary"><strong>What it means for you:</strong> This policy explains how long the Association keeps different types of records. If you ever need to request historical documents, this tells you what&rsquo;s still available and what may have been destroyed after its retention period.</p>
+      <div class="key-label">Retention Schedule</div>
+      <ul class="key-items">
+        <li><span class="key-text"><strong>Bylaws &amp; Covenants:</strong> Kept permanently &mdash; always available</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Financial Records &amp; Audits:</strong> Kept for 7 years</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Board &amp; Owner Meeting Minutes:</strong> Kept for 7 years</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Owner Account Records:</strong> Kept for 5 years (or last 5 years if ownership longer)</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Contracts:</strong> Kept until completion + 4 years</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+        <li><span class="key-text"><strong>Tax Returns:</strong> Kept for 7 years</span><a class="page-link" href="./Crest Management Documents/crest-management.com_Portal_ViewPublicDocument_FilePath=_sites_MasonWoodsCommunityAssociation_Corporate Records_Document Retention Policy.pdf#page=3" target="_blank">See p.3 &rarr;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p><strong>Mason Woods Community Association, Inc.</strong></p>
+  <p>Managed by Crest Management Company</p>
+  <p>17171 Park Row, Suite 310, Houston, TX 77084 &bull; <a href="tel:2815790761">281-579-0761</a></p>
+  <p><a href="https://www.crest-management.com/Communities/Mason-Woods-Community-Association" target="_blank">www.crest-management.com</a></p>
+  <p style="margin-top:1rem;font-size:.8rem;opacity:.6">This page is an unofficial reference guide. Always refer to the original documents for official legal text.</p>
+</footer>
+
+</body>
+</html>
