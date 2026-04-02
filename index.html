@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 <title>Mason Woods Community Association - Document Reference</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -10,8 +13,8 @@
   --primary:#1e3a5f;
   --primary-light:#2a5080;
   --primary-dark:#142942;
-  --accent:#e8f0fe;
-  --accent-hover:#d0e2fc;
+  --accent:#e0eaf6;
+  --accent-hover:#c8daf0;
   --bg:#fafafa;
   --white:#ffffff;
   --text:#1a1a2e;
@@ -19,10 +22,16 @@
   --text-light:#6b6b7b;
   --border:#dde3ea;
   --border-light:#edf1f5;
-  --card-shadow:0 1px 3px rgba(30,58,95,0.06), 0 4px 12px rgba(30,58,95,0.04);
+  --card-shadow:0 1px 3px rgba(30,58,95,0.08), 0 6px 16px rgba(30,58,95,0.05);
   --card-shadow-hover:0 4px 12px rgba(30,58,95,0.1), 0 8px 24px rgba(30,58,95,0.06);
   --sidebar-width:290px;
   --header-height:64px;
+  --cat-quickref:#c0392b;
+  --cat-governing:#1e3a5f;
+  --cat-property:#1a7a4c;
+  --cat-homeowner:#6c4ba0;
+  --cat-rental:#c27a1a;
+  --cat-admin:#2a7b9b;
 }
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 1rem)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
@@ -33,7 +42,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   height:var(--header-height);
-  background:var(--primary);
+  background:linear-gradient(180deg, var(--primary), var(--primary-dark));
   color:#fff;
   display:flex;align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,0.15);
@@ -51,7 +60,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 }
 .hamburger:hover{background:rgba(255,255,255,0.1)}
 .hamburger svg{display:block}
-.header-title{font-size:1.15rem;font-weight:700;letter-spacing:0.3px}
+.header-title{font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:0.3px}
 .header-subtitle{font-size:0.8rem;opacity:0.75;font-weight:400}
 .header-right{display:flex;align-items:center;gap:1rem}
 .lang-link{
@@ -129,6 +138,28 @@ a:hover{color:var(--primary-light);text-decoration:underline}
   border-left-color:var(--primary);
   text-decoration:none;
 }
+.sidebar-links a.active{
+  background:var(--accent);
+  border-left-color:var(--primary);
+  color:var(--primary);
+  font-weight:600;
+}
+.sidebar::before{
+  content:"Contents";
+  display:block;
+  padding:0.5rem 1.25rem 0.75rem;
+  font-size:0.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+  color:var(--text-light);
+  border-bottom:1px solid var(--border-light);
+  margin-bottom:0.5rem;
+}
+.sidebar-category:nth-child(1) .sidebar-category-title{border-left:3px solid var(--cat-quickref);margin-left:4px}
+.sidebar-category:nth-child(2) .sidebar-category-title{border-left:3px solid var(--cat-governing);margin-left:4px}
+.sidebar-category:nth-child(3) .sidebar-category-title{border-left:3px solid var(--cat-property);margin-left:4px}
+.sidebar-category:nth-child(4) .sidebar-category-title{border-left:3px solid var(--cat-homeowner);margin-left:4px}
+.sidebar-category:nth-child(5) .sidebar-category-title{border-left:3px solid var(--cat-rental);margin-left:4px}
+.sidebar-category:nth-child(6) .sidebar-category-title{border-left:3px solid var(--cat-admin);margin-left:4px}
 
 /* ===== OVERLAY (mobile) ===== */
 .sidebar-overlay{
@@ -150,23 +181,33 @@ a:hover{color:var(--primary-light);text-decoration:underline}
   background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 100%);
   color:#fff;
   border-radius:12px;
-  padding:2.5rem 2.5rem 2rem;
+  padding:1.75rem 2rem 1.5rem;
   margin-bottom:2.5rem;
   box-shadow:0 4px 16px rgba(30,58,95,0.15);
 }
-.hero h1{font-size:1.8rem;font-weight:800;margin-bottom:0.5rem;letter-spacing:-0.3px}
+.hero h1{font-family:'Inter',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:0.5rem;letter-spacing:-0.3px}
 .hero p{font-size:1rem;opacity:0.88;max-width:650px;line-height:1.6}
 .hero-meta{margin-top:1rem;font-size:0.85rem;opacity:0.7}
 
 /* ===== CATEGORY SECTIONS ===== */
 .category-section{margin-bottom:3rem}
 .category-heading{
-  font-size:1.35rem;font-weight:700;color:var(--primary);
-  padding-bottom:0.6rem;
+  font-family:'Inter',sans-serif;
+  font-size:1.1rem;font-weight:800;color:var(--primary);
+  background:var(--accent);
+  padding:0.75rem 1.25rem;
+  border-radius:8px;
+  border-bottom:none;
+  border-left:4px solid var(--primary);
   margin-bottom:1.5rem;
-  border-bottom:3px solid var(--accent);
   display:flex;align-items:center;gap:0.5rem;
 }
+#cat-quickref .category-heading{border-left-color:var(--cat-quickref)}
+#cat-governing .category-heading{border-left-color:var(--cat-governing)}
+#cat-property .category-heading{border-left-color:var(--cat-property)}
+#cat-homeowner .category-heading{border-left-color:var(--cat-homeowner)}
+#cat-rental .category-heading{border-left-color:var(--cat-rental)}
+#cat-admin .category-heading{border-left-color:var(--cat-admin)}
 .category-heading .cat-num{
   display:inline-flex;align-items:center;justify-content:center;
   width:28px;height:28px;
@@ -174,45 +215,61 @@ a:hover{color:var(--primary-light);text-decoration:underline}
   border-radius:6px;font-size:0.8rem;font-weight:700;
   flex-shrink:0;
 }
+#cat-quickref .cat-num{background:var(--cat-quickref)}
+#cat-governing .cat-num{background:var(--cat-governing)}
+#cat-property .cat-num{background:var(--cat-property)}
+#cat-homeowner .cat-num{background:var(--cat-homeowner)}
+#cat-rental .cat-num{background:var(--cat-rental)}
+#cat-admin .cat-num{background:var(--cat-admin)}
 
 /* ===== DOCUMENT CARDS ===== */
 .doc-card{
   background:var(--white);
   border:1px solid var(--border);
   border-radius:10px;
-  padding:1.75rem;
-  margin-bottom:1.5rem;
+  border-top:3px solid var(--primary);
+  padding:2rem 2.25rem;
+  margin-bottom:2rem;
   box-shadow:var(--card-shadow);
-  transition:box-shadow .2s;
+  transition:box-shadow .2s, opacity .5s ease, transform .5s ease;
+  opacity:0;
+  transform:translateY(12px);
 }
+.doc-card.visible{opacity:1;transform:translateY(0)}
 .doc-card:hover{box-shadow:var(--card-shadow-hover)}
 .doc-card.hidden{display:none}
+#cat-quickref .doc-card{border-top-color:var(--cat-quickref)}
+#cat-governing .doc-card{border-top-color:var(--cat-governing)}
+#cat-property .doc-card{border-top-color:var(--cat-property)}
+#cat-homeowner .doc-card{border-top-color:var(--cat-homeowner)}
+#cat-rental .doc-card{border-top-color:var(--cat-rental)}
+#cat-admin .doc-card{border-top-color:var(--cat-admin)}
 
 .doc-card-top{display:flex;gap:1.5rem;align-items:flex-start}
 .doc-thumb{flex-shrink:0}
 .doc-thumb img{
-  width:130px;border:1px solid var(--border-light);
+  width:100px;border:1px solid var(--border-light);
   border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.06);
   transition:transform .15s;
   cursor:pointer;
 }
 .doc-thumb img:hover{transform:scale(1.03)}
 .doc-info{flex:1;min-width:0}
-.doc-title{font-size:1.15rem;font-weight:700;color:var(--primary-dark);margin-bottom:0.5rem;line-height:1.35}
+.doc-title{font-family:'Inter',sans-serif;font-size:1.25rem;font-weight:700;color:var(--primary-dark);margin-bottom:0.5rem;line-height:1.35;letter-spacing:-0.2px}
 .doc-summary{font-size:0.92rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.65}
 
 /* Key Facts */
 .key-facts{
-  background:var(--accent);
+  background:#e8f0fe;
   border-radius:8px;
   padding:1.15rem 1.25rem;
   margin-bottom:1rem;
 }
-.key-facts-title{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--primary);margin-bottom:0.6rem}
+.key-facts-title{font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--primary);margin-bottom:0.6rem}
 .key-facts ul{list-style:none;padding:0}
 .key-facts li{
   font-size:0.88rem;color:var(--text-secondary);
-  padding:0.25rem 0;padding-left:1.1rem;
+  padding:0.4rem 0;padding-left:1.1rem;
   position:relative;line-height:1.55;
 }
 .key-facts li::before{
@@ -238,7 +295,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
   transition:background .15s;
   text-decoration:none;
 }
-.btn-pdf:hover{background:var(--primary-light);color:#fff;text-decoration:none}
+.btn-pdf:hover{background:var(--primary-light);color:#fff;text-decoration:none;transform:translateY(-1px);box-shadow:0 2px 8px rgba(30,58,95,0.15)}
 .btn-pdf svg{flex-shrink:0}
 .btn-pdf-outline{
   display:inline-flex;align-items:center;gap:0.4rem;
@@ -295,6 +352,48 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 .footer-inner{max-width:1100px}
 .footer-title{color:#fff;font-weight:700;font-size:0.95rem;margin-bottom:0.4rem}
 
+/* ===== QUICK REFERENCE SPECIAL ===== */
+.quickref-banner{
+  background:linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  color:#fff;
+  padding:1.25rem 1.5rem;
+  border-radius:10px 10px 0 0;
+  margin-bottom:0;
+}
+.quickref-banner h2{font-family:'Inter',sans-serif;font-size:1.15rem;font-weight:800;margin:0 0 0.25rem}
+.quickref-banner p{font-size:0.88rem;opacity:0.9;margin:0}
+#cat-quickref .doc-card{
+  background:linear-gradient(135deg, #fdf6f5, #faf0ee);
+  border-color:#e8c8c3;
+  border-top:none;
+  border-radius:0 0 10px 10px;
+}
+#cat-quickref .key-facts{
+  background:rgba(255,255,255,0.7);
+  border:1px solid #e8c8c3;
+}
+#cat-quickref .key-facts-title{color:#c0392b}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top{
+  position:fixed;bottom:2rem;right:2rem;
+  width:44px;height:44px;
+  background:var(--primary);color:#fff;
+  border:none;border-radius:50%;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .3s, visibility .3s, transform .15s;
+  z-index:800;
+  touch-action:manipulation;
+}
+.back-to-top.show{opacity:1;visibility:visible}
+.back-to-top:hover{transform:translateY(-2px);background:var(--primary-light)}
+
+/* ===== TOUCH ACTION ===== */
+.btn-pdf,.btn-pdf-outline,.sidebar-links a,.hamburger,.lang-link,.sidebar-category-title{touch-action:manipulation}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:900px){
   .sidebar{
@@ -310,17 +409,17 @@ a:hover{color:var(--primary-light);text-decoration:underline}
   .hero{padding:1.5rem;border-radius:8px}
   .hero h1{font-size:1.4rem}
   .doc-card-top{flex-direction:column}
-  .doc-thumb img{width:100px}
-  .search-box input{width:160px}
-  .search-box input:focus{width:200px}
+  .doc-thumb{display:none}
+  .search-box input{width:100%;max-width:240px}
+  .search-box input:focus{width:100%;max-width:280px}
   .header-subtitle{display:none}
 }
 @media(max-width:500px){
   .header-title{font-size:1rem}
-  .search-box input{width:120px}
-  .search-box input:focus{width:160px}
+  .search-box input{width:100%;max-width:200px}
+  .search-box input:focus{width:100%;max-width:220px}
   .doc-card{padding:1.25rem}
-  .key-facts{padding:1rem}
+  .key-facts{padding:0.85rem 1rem}
 }
 </style>
 </head>
@@ -434,9 +533,13 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 <!-- QUICK REFERENCE CHEAT SHEET -->
 <!-- ============================================================ -->
 <section class="category-section" id="cat-quickref">
-  <h2 class="category-heading"><span class="cat-num" style="background:#c0392b">!</span> Quick Reference Cheat Sheet</h2>
+  <h2 class="category-heading"><span class="cat-num">!</span> Quick Reference Cheat Sheet</h2>
 
-  <div class="doc-card" id="quickref" style="border-left:4px solid #c0392b">
+  <div class="quickref-banner">
+    <h2>Quick Reference Cheat Sheet</h2>
+    <p>The most commonly looked-up rules at a glance. Bookmark this section.</p>
+  </div>
+  <div class="doc-card" id="quickref">
     <div class="doc-info" style="width:100%">
       <p class="doc-summary" style="margin-bottom:1.25rem"><strong>The most commonly looked-up rules at a glance.</strong> Bookmark this section. For full details, click any link to jump to the relevant document.</p>
 
@@ -2085,6 +2188,11 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 
 </main>
 
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 7 15 12"/><line x1="10" y1="7" x2="10" y2="17"/></svg>
+</button>
+
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -2147,6 +2255,57 @@ window.addEventListener('resize',function(){
     document.getElementById('sidebarOverlay').classList.remove('active');
   }
 });
+
+// Back to Top button
+(function(){
+  var btn=document.getElementById('backToTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>400){
+      btn.classList.add('show');
+    }else{
+      btn.classList.remove('show');
+    }
+  });
+})();
+
+// Card fade-in animation on scroll
+(function(){
+  var cards=document.querySelectorAll('.doc-card');
+  if('IntersectionObserver' in window){
+    var fadeObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.05});
+    cards.forEach(function(card){fadeObserver.observe(card)});
+  }else{
+    cards.forEach(function(card){card.classList.add('visible')});
+  }
+})();
+
+// Scroll-spy: highlight active sidebar link
+(function(){
+  var cardEls=document.querySelectorAll('.doc-card[id]');
+  var sidebarLinks=document.querySelectorAll('.sidebar-links a');
+  if('IntersectionObserver' in window && cardEls.length){
+    var spyObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var id=entry.target.getAttribute('id');
+        var link=document.querySelector('.sidebar-links a[href="#'+id+'"]');
+        if(link){
+          if(entry.isIntersecting){
+            sidebarLinks.forEach(function(l){l.classList.remove('active')});
+            link.classList.add('active');
+          }
+        }
+      });
+    },{rootMargin:'-20% 0px -60% 0px'});
+    cardEls.forEach(function(card){spyObserver.observe(card)});
+  }
+})();
 </script>
 
 </body>
