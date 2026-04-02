@@ -353,6 +353,15 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-category">
     <div class="sidebar-category-title" onclick="toggleCategory(this)">
+      <span style="color:#c0392b;font-weight:800">! &mdash; Quick Reference</span>
+      <span class="arrow">&#9660;</span>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="#quickref" onclick="closeMobileSidebar()">Cheat Sheet</a></li>
+    </ul>
+  </div>
+  <div class="sidebar-category">
+    <div class="sidebar-category-title" onclick="toggleCategory(this)">
       <span>1 &mdash; Governing Documents</span>
       <span class="arrow">&#9660;</span>
     </div>
@@ -422,6 +431,80 @@ a:hover{color:var(--primary-light);text-decoration:underline}
 </div>
 
 <!-- ============================================================ -->
+<!-- QUICK REFERENCE CHEAT SHEET -->
+<!-- ============================================================ -->
+<section class="category-section" id="cat-quickref">
+  <h2 class="category-heading"><span class="cat-num" style="background:#c0392b">!</span> Quick Reference Cheat Sheet</h2>
+
+  <div class="doc-card" id="quickref" style="border-left:4px solid #c0392b">
+    <div class="doc-info" style="width:100%">
+      <p class="doc-summary" style="margin-bottom:1.25rem"><strong>The most commonly looked-up rules at a glance.</strong> Bookmark this section. For full details, click any link to jump to the relevant document.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem">
+
+        <!-- Column 1: Property Rules -->
+        <div>
+          <div class="key-facts" style="margin-bottom:0">
+            <div class="key-facts-title">Property &amp; Modifications</div>
+            <ul>
+              <li><strong>ARC approval required</strong> for ALL exterior changes &mdash; before you start work. <a href="#arch-guidelines">See Guidelines &rarr;</a></li>
+              <li><strong>Fence material:</strong> Cedar dog-eared pickets, pine posts. No chain link. Stain only, no paint. <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Exterior paint:</strong> Earth tones only, must match brick/roof. <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Pools:</strong> No above-ground pools. Rear yard only. 3 ft from property lines. <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Pool fence (pre-approved):</strong> Black mesh, under 6 ft = no ARC needed. <a href="#pool-enclosures">Details &rarr;</a></li>
+              <li><strong>Storage sheds:</strong> Max 9 ft tall, 120 sq ft, on concrete slab, must match home. <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Patio covers:</strong> Wood or aluminum, 7&ndash;12 ft height, shingles match home. <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Landscaping:</strong> Live plants only. Black/brown mulch only (no red). <a href="#arch-guidelines">Details &rarr;</a></li>
+              <li><strong>Solar panels:</strong> Allowed &mdash; back of roof preferred. ARC approval needed. <a href="#solar-roofing">Details &rarr;</a></li>
+              <li><strong>Generators:</strong> Min 7 kW, enclosed, licensed installer, test only 10am&ndash;4pm. <a href="#generator">Details &rarr;</a></li>
+              <li><strong>Flags:</strong> 1 pole per lot. US/TX/military flags only. Wall-mount (5 ft) = no ARC needed. <a href="#flag-display">Details &rarr;</a></li>
+              <li><strong>Min. home size:</strong> 1,200 sq ft living area. <a href="#supplements">Details &rarr;</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 2: Facility Rental & Fees -->
+        <div>
+          <div class="key-facts" style="margin-bottom:1rem">
+            <div class="key-facts-title">Facility Rental Quick Facts</div>
+            <ul>
+              <li><strong>Location:</strong> 7317 Grand Mason Drive (serving room + patio)</li>
+              <li><strong>Rental fee:</strong> $200 &bull; <strong>Deposit:</strong> $1,000 (refundable)</li>
+              <li><strong>Hours:</strong> Sun&ndash;Thu 10am&ndash;10pm &bull; Fri&ndash;Sat 10am&ndash;midnight</li>
+              <li><strong>Max guests:</strong> 30 total &bull; <strong>Booking:</strong> 14+ business days ahead</li>
+              <li><strong>1 rental per quarter</strong> per household &bull; Social use only</li>
+              <li><strong>Not allowed:</strong> Alcohol, smoking, glass, outside grills, animals</li>
+              <li><strong>Payment:</strong> Check or money order only &mdash; no cash/cards</li>
+              <li><strong>Cancel 14+ days out:</strong> deposit refunded &bull; <strong>Less:</strong> forfeited</li>
+              <li><a href="#rental-policy">Full rental rules &rarr;</a> &bull; <a href="#rental-price-sheet">Price sheet &rarr;</a> &bull; <a href="#rental-application">Application &rarr;</a></li>
+            </ul>
+          </div>
+          <div class="key-facts">
+            <div class="key-facts-title">Violations &amp; Fines</div>
+            <ul>
+              <li><strong>Process:</strong> Courtesy Letter &rarr; Violation Letter &rarr; Demand Letter &rarr; Fines</li>
+              <li><strong>Curable fine:</strong> up to $100/day until fixed. <a href="#enforcement">Details &rarr;</a></li>
+              <li><strong>You always have 30 days</strong> to request a Board hearing</li>
+              <li><strong>Repeat violations</strong> within 6 months: fines start immediately, no new letter</li>
+              <li><strong>HOA dues late?</strong> Delinquent after 30 days. Payment plans available (min 3 months). <a href="#collection-policy">Details &rarr;</a></li>
+            </ul>
+          </div>
+          <div class="key-facts">
+            <div class="key-facts-title">Contact</div>
+            <ul>
+              <li><strong>Crest Management:</strong> 281-579-0761</li>
+              <li><strong>Address:</strong> 17171 Park Row, Suite 310, Houston TX 77084</li>
+              <li><strong>Website:</strong> <a href="https://www.crest-management.com/Communities/Mason-Woods-Community-Association" target="_blank">crest-management.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
 <!-- CATEGORY 1: GOVERNING DOCUMENTS -->
 <!-- ============================================================ -->
 <section class="category-section" id="cat-governing">
@@ -460,7 +543,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Overview</h4>
         <p>The Declaration of Covenants, Conditions, and Restrictions (DCCR) is the foundational legal document for the Mason Woods Community Association. It was recorded with the Harris County Clerk and applies to every lot within the community. Every homeowner, and every future purchaser of property in Mason Woods, is bound by this document.</p>
@@ -537,7 +620,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Board of Directors</h4>
         <ul>
@@ -627,7 +710,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Purpose</h4>
         <p>Each Supplemental Amendment annexes a specific section of land into the Mason Woods Community Association and subjects it to the Declaration of Covenants, Conditions, and Restrictions. The amendments for Sections 1, 4, 7, and 8 each follow a similar structure with section-specific environmental disclosures.</p>
@@ -715,7 +798,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>General Requirements</h4>
         <p>All exterior modifications to any lot in Mason Woods require prior written approval from the Architectural Review Committee (ARC). Applications must be submitted before any work begins. Unapproved modifications may be required to be removed at the owner's expense.</p>
@@ -832,7 +915,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Solar Energy Devices</h4>
         <p>This policy governs the installation and placement of solar energy devices on individual lots within Mason Woods, pursuant to Texas Property Code Sections 202.010 and 202.011.</p>
@@ -894,7 +977,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Overview</h4>
         <p>This policy regulates the installation of swimming pool and spa safety enclosure fences on residential lots in Mason Woods, pursuant to Texas Property Code Section 202.022.</p>
@@ -960,7 +1043,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Application Requirements</h4>
         <ul>
@@ -1043,7 +1126,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Permitted Flags</h4>
         <ul>
@@ -1115,7 +1198,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Right to Display</h4>
         <ul><li>Homeowners may display one or more religious items on their lot or home, provided the display is motivated by the owner's sincere religious belief, pursuant to Texas Property Code Section 202.018.</li></ul>
@@ -1168,7 +1251,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>ARC Application</h4>
         <ul><li>ARC approval is required before any rain barrel is installed on a residential lot.</li></ul>
@@ -1231,7 +1314,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Generator Requirements</h4>
         <ul>
@@ -1380,7 +1463,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Eligibility</h4>
         <ul>
@@ -1499,7 +1582,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Fee Schedule (Effective August 7, 2024)</h4>
         <ul>
@@ -1563,7 +1646,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Applicant Information</h4>
         <ul>
@@ -1679,7 +1762,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Assessment Process</h4>
         <ul>
@@ -1790,7 +1873,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Two Types of Violations</h4>
         <p><strong>Curable violations</strong> are those the owner can fix: parking violations, maintenance issues, barking dogs, failure to build per approved plans, etc. The owner is given time to correct the issue.</p>
@@ -1901,7 +1984,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Right to Inspect</h4>
         <ul>
@@ -1979,7 +2062,7 @@ a:hover{color:var(--primary-light);text-decoration:underline}
       </div>
     </div>
     <details class="full-text">
-      <summary>Full Document Text</summary>
+      <summary>Detailed Breakdown</summary>
       <div class="text-content">
         <h4>Retention Schedule</h4>
         <ul>
